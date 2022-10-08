@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learn Grid</title>
+</head>
+<body>
+
+
+    <!-- 
+        shortcut vscode
+        alt + up/down arrow         : move syntak
+        ctrl + alt+ up/down arrow   : multiple cursor
+        alt + left click            : manually cursor
+        ctrl + k   
+     -->
+
+     <!-- 
+        Terminology GRID
+        ---
+
+        1. Grid Container 
+        Element pembungkus grid, didefinisikan :
+        - display : grid;
+
+        2. Grid Item 
+        adalah isinya, didalam grid container  
+
+        3. Grid Line
+        garis horizontal (Kolom) > atau Vertikal (row/baris) ^ 
+        yang memisahkan grid menjadi beberapa bagian ditandai angka.
+
+        4. Grid Cell
+        Perpotongan / pertemuan antara baris dan kolom grid
+        ingat pake ms.exel, ambil 1 kolom no. 8, 1 cell.
+        
+        5. Grid Area
+        Kumpulan lebih dari satu grid celll yang membentuk
+        kotak. Misal ambil beberapa cell misalkan 4 cell, itu
+        akan menjadi satu area (harus jadi kotak).
+
+        6. Grid Track 
+        Ukuran/Jarak (cell) antara 2 grid line, bisa horizontal (kolom)
+        atau vertikal (row/baris). mirip cell padding.
+
+        7. Grid Gap
+        Jarak antar grid track/cel. margin cell
+      -->
+
+      <!-- 
+        Properties Grid
+        ---
+        Container
+        1. grid-template-columns: <track size (px/%/auto/fr)> | <line-name> <track-size>
+        2. grid-template-rows: <track size (px/%/auto/fr)> | <line-name> <track-size>
+
+            Explisit : Ketika kita secara jelas menuliskan ukuran secara jelas
+            Implicit : ketika menentukan secara otomatis sisa nya dari kolom dan baris 
+
+        3. grid-auto-columnns : <track-size>
+        4. grid-auto-rows : <track-size>
+        5. grid-auto-flow : row | column | row dense | column dense;
+        6. grid-template-areas
+        7. grid-template
+        8. grid-column-gap
+        9. grid-row-gap
+        10. grid-gap
+        11. grid
+        12. Justify-items
+        13. align-items
+        14. place-items
+        15. justify-content
+        16. align-content
+        17. place-content
+
+        Item
+        1. grid-column-start
+        2. grid-column-end
+        3. grid-row-start
+        4. grid-row-end 
+        5. grid-column
+        6. grid-row
+        7. grid-area
+        8. justify-self
+        9. align-self
+        10. place-self
+
+       -->
+
+    <div class="container">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+    </div>
+    
+</body>
+</html>

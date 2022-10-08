@@ -1,0 +1,111 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Space practice ---- */
+.container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 50px;
+}
+
+.item {
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.item:nth-child(even){
+    background-color: tomato;
+}
+/* Space Practice ---- */
+
+
+
+/* ===================*/
+/* 
+- grid-templet-column   : <track size (px/%/auto/fr)> | <line-name> <track-size>
+- grid-templet-rows     : <track size (px/%/auto/fr)> | <line-name> <track-size>
+*/
+
+/* .container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 100px 50px;
+    grid-template-rows: 50px 100px 150px;
+} 
+
+--- with fraction (fr) : auto responsive---
+.container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+} 
+
+
+1 + 2 + 3 = a
+lebar total % a = b
+nanti akan dapat sisa fr (b) 
+tidak perlu hitung presentasenya
+
+
+--- with Line Name (name) : call with name---
+.container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: [awal] 25% [kolom2] auto [kolom3] 50px [empat];
+    grid-template-rows : [baris1] 50px [baris2] 100px [baris3] auto [baris4];
+} 
+
+*/
+/* ===================*/
+
+
+/* ===================*/
+/* Atur ukuran item implisit 
+    Mengatur ukuran grid track yang
+    tidak dituliskan pada grid-templet (implicit track)
+*/
+/* 
+- grid-auto-column
+- grid-auto-rows
+*/
+
+/* .container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 100px 50px;
+    grid-template-rows: 50px 100px 150px;
+    grid-auto-rows: 200px; atur rows implisit
+} */
+/* ===================*/
+
+
+/* ===================*/
+/* 
+ Gimana supaya kolom implisit
+ mengatur penempatan item/cell pada grid track,
+ termasuk yang ditulis secara implicit
+ kalo di flexbox ada direction kalo ada yg lebih jadi baris
+*/
+/* 
+- grid-auto-flow : row | column | row dense | column dense;
+*/
+
+/* .container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 100px 50px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+} */
+/* ===================*/

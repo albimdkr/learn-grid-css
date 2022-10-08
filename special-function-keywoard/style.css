@@ -1,0 +1,77 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin:50px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns:1fr minmax(200px, 300px) 1fr;
+}
+
+.item {
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even) {
+    background-color: steelblue;
+}
+
+
+
+/* 
+Implementasi
+Repeat()  
+
+.container {
+    background-color: tomato;
+    margin:200px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: one value = repeat(3, 6fr) or two value repeat(3, 6fr)  repeat(4, auto) ;
+    grid-auto-flow: column;
+} */
+
+/* 
+Implementasi
+min-content/max-content 
+
+.container {
+    background-color: tomato;
+    margin:200px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr min/max-content 1fr;
+}
+} */
+
+
+/* 
+Implementasi
+auto-fill & auto-fit 
+
+.container {
+    margin:50px auto;
+    width: 60%;
+    display: grid;
+    border: 5px rgb(255, 217, 0) solid;
+    grid-template-columns: repeat(auto-fill, 200px);
+}
+} */
+
+/* 
+Implementasi
+minmax() 
+
+.container {
+    margin:50px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns:1fr minmax(200px, 300px) 1fr;
+}
+
+} */

@@ -1,0 +1,27 @@
+html, body {
+    margin : 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 60%;
+    margin: 200px auto;
+    background-color: yellowgreen;
+    display: grid;
+    grid-template-columns:100px 200px auto;
+    grid-template-rows: 50px 50px;
+    grid-auto-flow: 170px;
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.item:nth-child(even) {
+    background-color: gold;
+
+}
