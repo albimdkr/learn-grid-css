@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+    * {
+        margin:0px;
+        padding: 0px;
+    }
+
+    .container {
+        background-color: yellow;
+        width: 80%;
+        height: 500px;
+        margin: 15% auto;
+        display: grid;
+        grid-template-rows: 80px 80px;
+        grid-template-columns: 120px 180px 120px;
+        gap: 5px;
+        /* properties align-content (vertikal)*/
+        /* align-content: start; */
+        /* align-content: center; */
+        /* align-content: end; */
+        /* align-content: stretch; */
+        /* align-content: space-around; */
+        /* align-content: space-between; */
+        /* align-content: space-evenly; */
+    }
+
+    .items {
+        width: 100px;
+        height: 50px;
+        border : 3px solid black;
+        background-color: rgb(22, 6, 248);
+        justify-content: end;
+    }
+    </style>
+</head>
+<body>
+    <!-- align - items -->
+    <!-- 
+        Sama seperti justify conntent, cuman secara
+        sumbu vertikal
+
+        contoh :
+        .container {
+            align-content : start | end | center | stretch | space-around | space-between | space-evenly;
+        }
+     -->
+
+     <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+     </div>
+
+</body>
+</html>

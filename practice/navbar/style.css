@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* STEP 14 : body nya agar fiks*/
+    overflow-x: hidden;
+}
+
+.logo {
+    display: flex;
+    margin-left: 40px;
+    border: 3px solid blue;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    padding: 5px;
+    background-color: yellow;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+nav ul {
+    border: 3px solid green;
+    display: flex;
+    /* background-color: darkcyan; */
+    justify-content: space-around;
+    margin: 10px;
+    width: 40%;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid orange;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+nav ul li a:hover {
+    color: rgb(253, 135, 227);
+}
+
+
+/* STEP 2 : css menu toggle > span */
+.menu-toggle span{
+    display: block;
+    background-color: purple;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    /*STEP 8:berikan animasi*/
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+
+/* STEP 3 : css menu toggle */
+.menu-toggle {
+    /* STEP 11 : berika display block */
+   display: none;
+   flex-direction: column;
+   height: 20px;
+   justify-content: space-between;
+   /* STEP 5 : posisition : relative */
+   position: relative;
+}
+
+
+/* STEP 6 : css menu toggle input */
+.menu-toggle input {
+    position: absolute;
+    /* supaya atur nya gampang */
+    width: 40px;
+    height: 28px;
+    left: -7px;
+    top: 0.3px;
+    opacity: 0.1;
+    cursor: pointer;
+    /* STEP 10 : beri z-index agar di depan */
+    z-index: 2;
+}
+
+
+
+/* STEP 7 : hamburger menu animation */
+/* opsi : nth child / class */
+.menu-toggle span:nth-child(2){
+    /*background-color: grey*/
+    transform-origin: 0 0; 
+    /* transform origin : untuk mengubah poros */
+}
+
+.menu-toggle span:nth-child(4){
+    /*background-color: grey;*/
+    transform-origin: 0 100%; 
+    /* transform origin : untuk mengubah poros */
+    /* (4) 0 100 : mengambil poros kanan bawah nya */
+}
+
+
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    /*~:siblins(anakkandung)*/
+    transform: rotate(45deg) translate(-1px, -1px);
+    /*45deg,supayarotasinyakekebawah*/
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    /*~:siblins(anakkandung)*/
+    transform: rotate(-45deg) translate(-1px, 0);
+    /*-45deg,supayarotasinyakeatas*/
+    /*translate : untuk presisikan span */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+
+/*STEP 9: hilangkan anak ke 3 dari span*/
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    opacity: 0;
+}
+
+
+
+
+/* Responsive BreakPoint */
+/* tablet */
+@media screen and (max-width: 768px){
+    nav {
+        background-color: darkcyan;
+    }
+    nav ul {
+        width: 65%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    
+    nav {
+        background-color: red;
+    }
+
+    /* STEP 12 : beri display flex pada .menu-toggle */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* STEP 13 : posisi ul ke kanan*/
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 90%;
+        height: 100vh;
+        /*jaditinggilayaryangkitalihat*/
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: -1;
+        /*agarmenjadikebawah*/
+        background-color: tomato;
+        /*pasdiawalpengenhiden*/
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%); 
+        /*STEP 15: tambahankan transisi*/
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        opacity: 0;
+}
+
+    /* STEP 14 : gunakan sebuah class */
+    nav ul.slide {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        opacity: 1;
+    }
+}

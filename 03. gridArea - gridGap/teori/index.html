@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grid Area || Grid Gap</title>
+</head>
+<body>
+    
+<!-- contoh soal -->
+<!-- 
+    - dibagian atas dijadikan header, 3 kolom
+    - sisi kiri sidebar
+    - sisi kanan content
+    - footer
+    pertama, tentukan dulu areanya dari grid
+ -->
+
+ <!-- Properties -->
+<!-- 
+    CSS
+    .container {
+        grid-template-areas : 
+        'header header header'
+        'sidebar content content'
+        'sidebar content content'
+        'footer footer footer';
+    }
+
+
+    HTML
+    kasih class untuk tiap per item yang akan digunakan
+    contoh :
+
+    <div class="item header">header</div>
+    <div class="item sidebar">sidebar</div>
+    <div class="item content">content</div>
+    <div class="item footer">footer</div>
+
+    jadi kita punya 4 div saja, bisa hilangkan div sisanya
+    aturanya belum sesuai
+
+    CSS
+    lalu masing-masing dari item harus kita kasih grid area
+    contoh panggil setiap bagian :
+    
+    .header {
+        grid-area : header;
+    }
+
+    .sidebar {
+        grid-area : sidebar;
+    }
+
+    .content {
+        grid-area : content;
+    }
+
+    .footer {
+        grid-area : footer;
+    }
+    nah nanti properties ini akan menempati posisinya.
+    note : kalau ingin pindah posisinya maka tinggal ganti aja area nya
+    Lalu tmabahkan @media query agar lebih responsive lagi
+ -->
+
+ <!-- Short hand -->
+<!-- 
+    .container {
+      grid-template: <grid-template-rows> | <grid-template-areas> / <grid-template-columns>;
+    }
+
+    .container {
+        grid:;
+    }
+ -->
+
+
+<!-- Gap -->
+<!-- 
+    column-gap : ;
+    rows-gap : ;
+ -->
+
+<div class="container">
+    <div class="item header">header</div>
+    <div class="item sidebar">sidebar</div>
+    <div class="item content">content</div>
+    <div class="item footer">footer</div>
+    <!-- <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div> -->
+</div>
+
+</body>
+</html>

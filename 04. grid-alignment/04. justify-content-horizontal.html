@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style>
+    * {
+        margin:0px;
+        padding: 0px;
+    }
+
+    .container {
+        background-color: yellow;
+        width: 80%;
+        margin: 15% auto;
+        display: grid;
+        grid-template-rows: 80px 80px;
+        grid-template-columns: 120px 180px 120px;
+        gap: 5px;
+        /* properties justify-content (horizontal)*/
+        /* justify-content: start; */
+        /* justify-content: center; */
+        /* justify-content: end; */
+        /* justify-content: stretch; */
+        /* justify-content: space-around; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+    }
+
+    .items {
+        width: 100px;
+        height: 50px;
+        border : 3px solid black;
+        background-color: rgb(248, 6, 6);
+        justify-content: end;
+    }
+    </style>
+</head>
+<body>
+    <!-- justify content -->
+    <!-- 
+        telah dipelajari di flebox, 
+        Difinisi : Mengatur posisi grid container pada sumbu horizontal.
+        Syarat nya : ini bisa dilakukan ketika ukuran total grid lebih kecil dari
+        ukuran containernya. Biasanya ketika grid  items nya
+        menggunakan ukuran yang fixed (px)
+
+        Contoh :
+        .container {
+            justify-content : start | end | center | stretch | space-around | space-between | space-evenly;
+        }
+     -->
+
+     <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+     </div>
+
+</body>
+</html>

@@ -11,7 +11,6 @@ html, body {
     grid-template-columns:100px 200px auto;
     grid-template-rows: 50px 50px;
     grid-auto-flow: 170px;
-
 }
 
 .item {
