@@ -126,7 +126,6 @@ img {
     width: 100%;
 }
 
-
 .header {
     display: grid;
     background-color: var(--color3);
@@ -137,24 +136,44 @@ img {
 
 .hero {
     grid-area: hero;
-    min-height: 500px;
-    background-image: url('header/12.jpeg');
+    min-height: 300px;
+    padding: 50px;
+    background-image: url('/practice/studycase/header/12.jpeg');
     background-position: center;
     background-size: cover;
     background-clip: border-box;
 }
 
+.features {
+    display: grid;
+    align-items: center;
+}
+
+
 .feature-1 {
+    grid-area: feature-1;
     background-image: url('header/1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url('header/10.jpeg');
+    background-position: center;
+    background-size: cover;
+
 }
 
 
 .hero > * {
     display: grid;
     color: var(--color3);
-    /* justify-content: center; */
+    justify-content: center;
     place-items: center;
 }
+
 
 
 
